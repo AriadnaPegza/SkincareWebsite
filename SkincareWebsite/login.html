@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Skin</title>
+<link rel = "icon" href ="images\logo.png" type = "image/x-icon">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
+</head>
+<script src="script.js"></script>
+<body>
+<section class="header">
+<nav>
+  <a href="index.html"><img src="images/logo.png" onmouseover="bigImg2(this)" onmouseout="normalImg(this)"></a>
+  <p class="title">Chic-Skin</p>
+  <div class="nav-links">
+    <ul>
+      <input type="text" placeholder="Cauta..">
+      <button> &#128269;</button>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="index.html">HOME</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="produse.html">PRODUSE</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="contacte.html">CONTACTE</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="about.html">ABOUT</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="login.html">LOGIN</a></li>
+    </ul>
+  <div align="right">
+    <hr class="up">
+</div>
+  </div>
+</nav>
+<br>
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div>
+    </div>
+    
+    <div class="form-container" id="login-form">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Logare</label>
+        <label for="signup" class="slide signup">Inregistrare</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div id="login-error-msg-holder">
+        <p id="login-error-msg">Email-ul sau parola incorecta!!</p>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login">
+          <div class="field">
+            <input type="text" placeholder="Adresa de email" name="email" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Parola" name="password" required>
+          </div>
+          <div class="pass-link"><a href="#">Ti-ai uitat parola?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login" id="login-form-submit">
+          </div>
+          <div class="signup-link">Nu ai cont? <a href="">Inregistreaza-te acum</a></div>
+        </form>
+        <form action="#" class="signup" name="form2">
+          <div class="field">
+            <input type="text" placeholder="Adresa de email" required name="email2">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Parola" required name="parola2" id="parola2">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirma parola" required name="parolaR">
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup" onclick="Email(document.form2.email2);Password(document.form2.parola2);repeatPass(document.form2.parolaR)">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<br><br><br><br><br><br>
+  <script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+
+    const LoginButton = document.getElementById("login-form-submit");
+    const loginErrorMsg = document.getElementById("login-error-msg");
+    signupBtn.onclick = (()=>{
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+    loginErrorMsg.style.opacity="0";
+  });
+  loginBtn.onclick = (()=>{
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+    loginErrorMsg.style.opacity="0";
+  });
+  signupLink.onclick = (()=>{
+    signupBtn.click();
+    return false;
+  });
+  LoginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const email = loginForm.email.value;
+    const password = loginForm.password.value;
+
+    if (email=="" || password=="") {
+           alert("Textul lipseste!");
+           return false;
+       }
+    else if (email === "user@gmail.com" && password === "parola") {
+        alert("Te-ai logat cu succes!!");
+        location.replace("index.html");
+    } 
+    else{
+        loginErrorMsg.style.opacity = 1;
+    }
+})
+  </script>
+</section>
+<footer>&copy;2022. All Rights Reserved</footer>
+</html>
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Skin</title>
+<link rel = "icon" href ="images\logo.png" type = "image/x-icon">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<script src="script.js">
+</script>
+</head>
+<body>
+<section class="header">
+<nav>
+  <a href="index.html"><img src="images/logo.png" onmouseover="bigImg2(this)" onmouseout="normalImg(this)"></a>
+  <p class="title">Chic-Skin</p>
+  <div class="nav-links">
+    <ul>
+      <input type="text" placeholder="Cauta..">
+      <button> &#128269;</button>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="index.html">HOME</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="produse.html">PRODUSE</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="contacte.html">CONTACTE</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="about.html">ABOUT</a></li>
+      <li onmouseover="bigImg2(this)" onmouseout="normalImg(this)"><a href="login.html">LOGIN</a></li>
+    </ul>
+    <div align="right">
+      <hr class="up">
+  </div>
+</nav>
+<div class="abo">
+  <div class="cont">
+    <div class="left-side">
+      <div class="address details">
+        <a href="https://www.google.com/maps/place/Chic+-+Face+and+Body+Clinic/@52.233849,20.99086,13z/data=!4m5!3m4!1s0x0:0x87a5c488d3494f34!8m2!3d52.2338489!4d20.9908595?hl=ro" target="_blank">
+        <i class="fas fa-map-marker-alt" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></i></a>
+        <div class="topic">Adresă</div>
+        <div class="text-one">Str. Miron Costin 26/2</div>
+        <div class="text-two">Chișinău 2068</div>
+      </div>
+      <div class="phone details">
+        <a href="tel:+0098 9893 5647"><i class="fas fa-phone-alt" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></i></a>
+        <div class="topic">Telefon</div>
+        <div class="text-one">+0098 9893 5647</div>
+        <div class="text-two">+0096 3434 5678</div>
+      </div>
+      <div class="email details">
+        <a href="mailto:chic_skin@gmail.com"><i class="fas fa-envelope" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></i></a>
+        <div class="topic">Email</div>
+        <div class="text-one">chic_skin@gmail.com</div>
+        <div class="text-two">info.chicskin@gmail.com</div>
+      </div>
+    </div>
+    <div class="right-side">
+    <div class="row">
+      <div class="column">
+    <iframe class="map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16438.347409761896!2d20.97292661174444!3d52.23293951916495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc62841047f1%3A0x87a5c488d3494f34!2sChic%20-%20Face%20and%20Body%20Clinic!5e0!3m2!1sro!2s!4v1666256813667!5m2!1sro!2s" width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  </div>
+<div class="contacts">
+  <h2 style="font-family:'Times New Roman', Times, serif">Contactează-ne</h2>
+  <form class="contact">
+      <input class="contact" type="email" name="email" id="email" placeholder="Introdu email" onfocus="focusP(this)" onblur="blurP(this)">
+      <input  class="contact" type="text" name="name" id="name" placeholder="Introdu nume" onfocus="focusP(this)" onblur="blurP(this)">
+      <textarea class="contact" name="message" id="message" cols="30" rows="10" placeholder="Scrie ceva.." onfocus="focusP(this)" onblur="blurP(this)"></textarea>
+      <input class="contact" type="submit" value="Trimite" onsubmit="return submitForm(this)">
+  </form>
+</div>
+</div>
+</section>
+</body>
+<footer>&copy;2022. All Rights Reserved</footer>
+</html>
